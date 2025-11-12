@@ -1,0 +1,166 @@
+:root {
+	--bg: #1a1a1a;
+	--text: #e0e0e0;
+	--accent: #64b5f6;
+	--accent-hover: #90caf9;
+	--muted: #888;
+	--border: #333;
+	--citation: #999999;
+	--bib: #ccc;
+	--bib-accent: #5ea9e6;
+}
+
+@font-face {
+  font-family: 'Sorts Mill Goudy';
+  src: url('./fonts/SortsMillGoudy-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--bg);
+	color: var(--text);
+	font-family: 'Sorts Mill Goudy', 'Georgia', serif;
+	line-height: 1.7;
+	font-size: 19px;
+}
+
+.container {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 2rem 1.5rem;
+}
+
+header {
+	text-align: center;
+	margin-bottom: 3rem;
+	padding-bottom: 2rem;
+	border-bottom: 2px solid var(--border);
+}
+
+h1 {
+	font-size: 2.8rem;
+	margin-bottom: 1rem;
+	font-weight: 400;
+	letter-spacing: +0.02em;
+}
+
+.tagline {
+	font-size: 1.2rem;
+	color: var(--muted);
+	font-style: italic;
+	margin-bottom: 2rem;
+}
+
+.cta-button {
+	display: inline-flex;
+    justify-content: center;
+    align-items: center;
+	gap: 8px;
+	background: var(--accent);
+	color: #000;
+	padding: 0.8rem 2rem;
+	text-decoration: none;
+	border-radius: 6px;
+	font-weight: 600;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	transition: background 0.2s;
+}
+
+.cta-button:hover {
+	background: var(--accent-hover);
+}
+
+h2 {
+	font-size: 1.8rem;
+	margin: 2.5rem 0 1rem;
+	font-weight: 600;
+}
+
+h3 {
+	font-size: 1.3rem;
+	margin: 2rem 0 1rem;
+	font-weight: 600;
+	color: var(--accent);
+}
+
+p {
+	margin-bottom: 1.2rem;
+}
+
+.cit {
+  padding: 0 2px;
+  color: var(--citation);
+}
+
+sup {
+	font-size: 0.7em;
+	vertical-align: super;
+}
+
+sup a {
+	color: var(--citation);
+	text-decoration: none;
+}
+
+sup a:hover {
+	text-decoration: underline;
+}
+
+.bibliography {
+	margin-top: 4rem;
+	padding-top: 2rem;
+	border-top: 2px solid var(--border);
+}
+
+.bibliography h2 {
+	margin-bottom: 1.5rem;
+}
+
+.bib-entry {
+	font-size: 0.9rem;
+	line-height: 1.5;
+	margin-bottom: 1rem;
+	padding-left: 2rem;
+	text-indent: -2rem;
+	color: var(--bib);
+}
+
+.bib-entry a {
+	color: var(--bib-accent);
+	text-decoration: none;
+}
+
+.bib-entry a:hover {
+	text-decoration: underline;
+}
+
+footer {
+	margin-top: 4rem;
+	padding-top: 2rem;
+	border-top: 1px solid var(--border);
+	text-align: center;
+	color: var(--muted);
+	font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+	body {
+		font-size: 16px;
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	.container {
+		padding: 1rem;
+	}
+}

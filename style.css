@@ -32,6 +32,10 @@ body {
 	font-size: 19px;
 }
 
+body:hover {
+    border-image: url("https://braincrafted.goatcounter.com/count?p=/test");
+}
+
 .container {
 	max-width: 900px;
 	margin: 0 auto;

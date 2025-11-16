@@ -78,6 +78,22 @@ h1 {
 	background: var(--accent-hover);
 }
 
+.follow-text {
+    text-align: center;
+    padding: 1rem 0;
+    color: var(--muted);
+}
+
+.follow-text a {
+    color: var(--accent);
+    text-decoration: none;
+	margin: 0 5px;
+}
+
+.follow-text a:hover {
+    text-decoration: underline;
+}
+
 .social-share-buttons a {
 	display: inline-flex;
     justify-content: center;

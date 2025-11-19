@@ -82,6 +82,20 @@ h1 {
 	background: var(--accent-hover);
 }
 
+.cta-text {
+	display: flex;
+	flex-direction: column;
+	margin-left: 5px;
+}
+
+.cta-main {
+	font-size:1.1em;
+}
+
+.cta-sub {
+	font-weight: 400;
+}
+
 .follow-text {
     text-align: center;
     padding: 1rem 0;

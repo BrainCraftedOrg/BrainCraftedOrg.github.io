@@ -30,6 +30,7 @@ body {
 	font-family: 'Sorts Mill Goudy', 'Georgia', serif;
 	line-height: 1.7;
 	font-size: 19px;
+	overflow-x: hidden
 }
 
 body:hover {

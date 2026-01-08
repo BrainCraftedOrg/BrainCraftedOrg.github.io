@@ -87,12 +87,11 @@ h1 {
 
 .fresco {
   width: 100vw;
-  height: 400px;              /* whatever fits the illustration */
+  height: 50vh;              /* whatever fits the illustration */
   margin-left: 50%;
   transform: translateX(-50%);
   
   background-image: url("images/ElectroMorris_ElenaBarbieri.png");
-  background-size: 40%;
   background-repeat: repeat-x;
   background-position: center;
   background-size: auto 100%;

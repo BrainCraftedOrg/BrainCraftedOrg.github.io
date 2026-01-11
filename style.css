@@ -239,6 +239,83 @@ footer {
 	font-size: 0.9rem;
 }
 
+/* --- Alternating essay layout --- */
+
+.essay {
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap: 4rem;
+	position: relative;
+	margin-top: 4rem;
+}
+
+/* Limit line length slightly more than container */
+.block {
+	max-width: 600px;
+	position: relative;
+    padding-left: 80px;
+	cursor: pointer;
+	transition: transform 0.3s ease;
+}
+
+.block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60px;
+  width: 60px;
+  height: 100%;
+  background-image: url("images/ElectroMorris_ElenaBarbieri.png");
+  background-size: var(--fresco-scale);
+  background-position: var(--fresco-x) var(--fresco-y);
+  opacity: 0.7;
+  transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+}
+
+/* Alternation via alignment only */
+.block.left {
+	justify-self: start;
+}
+
+.block.left:hover {
+	transform: translateX(20px);
+}
+
+.block:hover.left::before {
+  transform: translateX(-20px);
+  width: 80px;
+  opacity: 1;
+}
+
+.block.right {
+  justify-self: end;
+  padding-left: 0;
+  padding-right: 80px;
+}
+
+.block.right:hover {
+	transform: translateX(-20px);
+}
+
+.block:hover.right::before {
+  transform: translateX(20px);
+  width: 80px;
+  opacity: 1;
+}
+
+.block.right::before {
+  left: auto;
+  right: -60px;
+  background-position: right var(--fresco-x) bottom var(--fresco-y);
+}
+
+
+/* Preserve manifesto typography */
+.block h2 {
+	margin-top: 0;
+	font-weight: 400;
+}
+
 @media (max-width: 768px) {
 	body {
 		font-size: 16px;
@@ -250,6 +327,11 @@ footer {
 
 	.container {
 		padding: 1rem;
+	}
+	
+	.block {
+		max-width: 100%;
+		justify-self: stretch;
 	}
 }
 

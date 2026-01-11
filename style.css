@@ -405,6 +405,15 @@ footer {
 	.block {
 		max-width: 100%;
 		justify-self: stretch;
+		padding-left: 0px;
+	}
+	
+	.block.right {
+		padding-right: 0px;
+	}
+	
+	.block::before {
+		content: none;
 	}
 }
 
